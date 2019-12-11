@@ -2,13 +2,13 @@ pipeline {
     agent none
     stages {
         stage('LinuxBuild') {
-            agent { label 'linux-agent' }
+            agent { label 'linux-slave' }
             steps {
                 echo 'Linux build command'
             }
         }
         stage('WindowsBuild') {
-            agent { label 'windows-agent' }
+            agent { label 'windows-slave' }
             steps {
                 echo 'Windows build command'
             }
