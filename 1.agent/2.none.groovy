@@ -1,8 +1,7 @@
 pipeline {
-    agent none
+    agent { label 'linux-slave' }
     stages {
         stage('LinuxBuild') {
-            agent { label 'linux-slave' }
             steps {
                 echo 'Linux build command'
             }
