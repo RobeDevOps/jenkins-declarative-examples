@@ -6,12 +6,15 @@ pipeline {
                 parallel(
                 ubuntu: {
                     echo "Comiling ubuntu"
+                    sleep 10
                 }
                 windows: {
-                    echo "Compiling windows"
+                    echo "Comiling windows"
+                    sleep 20
                 },
-                macOs: {
-                    echo "Compiling MacOS"
+                extraOS: {
+                    echo "Comiling extraOS "
+                    sleep 5
                 }
                 )
             }
