@@ -1,21 +1,21 @@
 pipeline {
     agent any
     stages{
-        stage('Comiling for ubuntu') {
+        stage('Test for ubuntu') {
             steps {
-                echo "Comiling ubuntu"
+                echo "Test ubuntu"
                 sleep 10
             }
         }
-        stage('Comiling for windows') {
+        stage('Test for windows') {
             steps {
-                echo "Comiling windows"
+                echo "Test windows"
                 sleep 20
             }
         }
-        stage('Comiling extra OS') {
+        stage('Test extra OS') {
             steps {
-                echo "Comiling extra OS"
+                echo "Test extra OS"
                 sleep 5
             }
         }

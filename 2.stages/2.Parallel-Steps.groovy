@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages{
-        stage('Build') {
+        stage('Test') {
             steps {
                 parallel(
                 ubuntu: {
-                    echo "Comiling ubuntu"
+                    echo "Test ubuntu"
                     sleep 10
                 }
                 windows: {
-                    echo "Comiling windows"
+                    echo "Test windows"
                     sleep 20
                 },
                 extraOS: {
-                    echo "Comiling extra OS "
+                    echo "Test extra OS "
                     sleep 5
                 }
                 )

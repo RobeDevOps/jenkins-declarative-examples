@@ -1,23 +1,23 @@
 pipeline {
     agent any
     stages{
-        stage('Build') {
+        stage('Tests') {
             parallel {
-                stage("Comiling ubuntu"){
+                stage("Tests ubuntu"){
                     steps {
-                        echo "Comiling ubuntu"
+                        echo "Tests ubuntu"
                         sleep 10
                     }
                 }
-                stage("Comiling windows"){
+                stage("Tests windows"){
                     steps {
-                        echo "Comiling windows"
+                        echo "Tests windows"
                         sleep 20
                     }
                 }
-                stage("Comiling ectra OS"){
+                stage("Tests ectra OS"){
                     steps {
-                        echo "Comiling ectra OS"
+                        echo "Tests ectra OS"
                         sleep 10
                     }
                 }
