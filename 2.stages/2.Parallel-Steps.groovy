@@ -5,15 +5,15 @@ pipeline {
             steps {
                 parallel(
                 ubuntu: {
-                    echo "Test ubuntu"
+                    echo "Test Minor"
                     sleep 10
                 }
                 windows: {
-                    echo "Test windows"
+                    echo "Test Major"
                     sleep 20
                 },
                 extraOS: {
-                    echo "Test extra OS "
+                    echo "Test Critical"
                     sleep 5
                 }
                 )
