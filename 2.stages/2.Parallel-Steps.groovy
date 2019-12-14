@@ -7,7 +7,7 @@ pipeline {
                 ubuntu: {
                     echo "Test Minor"
                     sleep 10
-                }
+                },
                 windows: {
                     echo "Test Major"
                     sleep 20
