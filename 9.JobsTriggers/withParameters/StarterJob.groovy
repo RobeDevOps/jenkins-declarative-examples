@@ -15,8 +15,7 @@ pipeline {
                 script{
                     build job: 'ReleaseJob', 
                     parameters: [
-                        [ $class: 'StringParameterValue', name: 'FROM_BUILD', value: "${BUILD_NUMBER}" ]
-                        
+                        [ $class: 'StringParameterValue', name: 'FROM_BUILD', value: "${BUILD_NUMBER}" ]                        
                     ]
                 }
             }
