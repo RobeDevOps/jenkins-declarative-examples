@@ -13,10 +13,15 @@ pipeline {
         stage('DEPLOY'){
             steps{
                 script{
-                    build job: 'ReleaseJob', 
+                    def releaseJob = build job: 'ReleaseJob', propagate: false 
                     parameters: [
-                        [ $class: 'StringParameterValue', name: 'FROM_BUILD', value: "${BUILD_NUMBER}" ]                        
+                        [ $class: 'StringParameterValue', name: 'FROM_BUILD', value: "${BUILD_NUMBER}" ],
+                        [ $class: 'BooleanParameterValue', name: 'IS_READY', value: true ]                        
                     ]
+
+                    if(releaseJob.result != "SUCCESS"){
+                        echo "Release status: ${releaseJob.result}"
+                    }
                 }
             }
         }
